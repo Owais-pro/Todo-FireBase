@@ -68,7 +68,7 @@ const DeleteTodos = async (event)=>{
 const UpdateTodos = async (event)=>{
     try { 
         const newInput = prompt("Enter Updated Todo");  
-   const UserCollection =  doc(db, "My-Todos", event.id);
+    UserCollection =  doc(db, "My-Todos", event.id);
    await updateDoc(UserCollection, {
     Value: newInput.value
    })
