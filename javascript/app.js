@@ -96,7 +96,14 @@ const UpdateTodos = async (event) => {
   }
 };
 
+  const LogOut = ()=>{
+  localStorage.removeItem("UserId");
+  localStorage.clear();
+  window.location.replace("../pages/Login.html")
+}
+
 window.UpdateTodos = UpdateTodos;
 window.DeleteTodos = DeleteTodos;
 window.AddTodo = AddTodo;
 window.addEventListener("load", GetValue);
+window.LogOut = LogOut;
